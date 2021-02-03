@@ -1,10 +1,10 @@
-import "./App.module.css";
-import Header from "./header/header";
+import styles from "./App.module.css";
+import Login from "./login/login";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div className={styles.loginBox}>
+      <Login />
     </div>
   );
 }
