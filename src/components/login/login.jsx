@@ -3,7 +3,14 @@ import styles from "./login.module.css";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
-const Login = () => {
+const Login = ({ auth }) => {
+  const onLogin = () => {
+    auth //
+      .login()
+      .then((result) => {
+        console.log(result.user);
+      });
+  };
   return (
     <section className={styles.container}>
       <Header />
@@ -11,7 +18,9 @@ const Login = () => {
         <h2 className={styles.title}>Login</h2>
         <ul className={styles.list}>
           <li>
-            <button type="button">Google</button>
+            <button type="button" onClick={onLogin}>
+              Google
+            </button>
           </li>
         </ul>
       </section>

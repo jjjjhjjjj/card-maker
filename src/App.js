@@ -1,10 +1,10 @@
 import styles from "./App.module.css";
 import Login from "./components/login/login";
 
-function App() {
+function App({ auth }) {
   return (
     <div className={styles.loginBox}>
-      <Login />
+      <Login auth={auth} />
     </div>
   );
 }
