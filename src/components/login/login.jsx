@@ -1,16 +1,26 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./login.module.css";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
 const Login = ({ auth }) => {
+  const history = useHistory();
   const onLogin = () => {
     auth //
       .login()
       .then((result) => {
-        console.log(result.user);
+        goToMaker(result.user.uid);
       });
   };
+
+  const goToMaker = (uid) => {
+    history.push({
+      pathname: "/maker",
+      uid,
+    });
+  };
+
   return (
     <section className={styles.container}>
       <Header />
