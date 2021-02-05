@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./login.module.css";
 import Header from "../header/header";
@@ -20,6 +20,12 @@ const Login = ({ auth }) => {
       uid,
     });
   };
+
+  useEffect(() => {
+    auth.onAuthState((user) => {
+      user && goToMaker(user.uid);
+    });
+  }, []);
 
   return (
     <section className={styles.container}>

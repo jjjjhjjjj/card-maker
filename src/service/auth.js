@@ -7,6 +7,12 @@ class Auth {
 
     return firebaseApp.auth().signInWithPopup(provider);
   }
+
+  onAuthState(onUserChange) {
+    firebase.auth().onAuthStateChanged((user) => {
+      onUserChange(user);
+    });
+  }
 }
 
 export default Auth;

@@ -8,7 +8,7 @@ function App({ auth }) {
     <Router>
       <Switch>
         <Route path="/maker">
-          <Maker />
+          <Maker auth={auth} />
         </Route>
         <Route path="/">
           <div className={styles.loginBox}>
