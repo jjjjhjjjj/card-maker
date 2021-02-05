@@ -11,9 +11,11 @@ const Header = ({ onLogout }) => {
           src="../images/logo.png"
           alt="card-maker"
         />
-        <button className={styles.logout} type="button" onClick={onLogout}>
-          Logout
-        </button>
+        {onLogout && (
+          <button className={styles.logout} type="button" onClick={onLogout}>
+            Logout
+          </button>
+        )}
       </div>
     </header>
   );
