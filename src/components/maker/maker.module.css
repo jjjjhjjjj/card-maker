@@ -1,0 +1,17 @@
+.maker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.makerMain {
+  display: flex;
+  flex: 1;
+}
+
+@media screen and (max-width: 65rem) {
+  .makerMain {
+    flex-direction: column;
+  }
+}

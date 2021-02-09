@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router";
-import Footer from "../footer/footer";
 import Header from "../header/header";
+import Editor from "../editor/editor";
+import Preview from "../preview/preview";
+import Footer from "../footer/footer";
 import styles from "./maker.module.css";
+
 const Maker = ({ auth }) => {
   const history = useHistory();
 
@@ -20,10 +23,14 @@ const Maker = ({ auth }) => {
     });
   }, []);
   return (
-    <>
+    <div className={styles.maker}>
       <Header onLogout={onLogout} />
+      <section className={styles.makerMain}>
+        <Editor />
+        <Preview />
+      </section>
       <Footer />
-    </>
+    </div>
   );
 };
 
