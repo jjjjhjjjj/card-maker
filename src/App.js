@@ -5,18 +5,18 @@ import Maker from "./components/maker/maker";
 
 function App({ auth }) {
   return (
-    <Router>
-      <Switch>
-        <Route path="/maker">
-          <Maker auth={auth} />
-        </Route>
-        <Route path="/">
-          <div className={styles.loginBox}>
+    <div className={styles.app}>
+      <Router>
+        <Switch>
+          <Route path="/maker">
+            <Maker auth={auth} />
+          </Route>
+          <Route path="/">
             <Login auth={auth} />
-          </div>
-        </Route>
-      </Switch>
-    </Router>
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 

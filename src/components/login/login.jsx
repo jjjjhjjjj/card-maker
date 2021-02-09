@@ -28,12 +28,12 @@ const Login = ({ auth }) => {
   }, []);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.login}>
       <Header />
-      <section className={styles.login}>
+      <section className={styles.container}>
         <h2 className={styles.title}>Login</h2>
         <ul className={styles.list}>
-          <li>
+          <li className={styles.item}>
             <button type="button" onClick={onLogin}>
               Google
             </button>

@@ -1,37 +1,40 @@
-.container {
-  width: 350px;
+@value makeDarkBule from '../../common/colors.css';
+
+.login {
+  width: 30em;
+  text-align: center;
   background-color: white;
 }
 
-.login {
-  padding: 6% 0;
+.container {
+  padding: 1em 0;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.list {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.title {
-  font-size: 1.3em;
-  margin-bottom: 4%;
-}
-
-.list {
-  width: 100%;
-  text-align: center;
-}
-
-.list li {
+.item {
   width: 100%;
 }
 
-.list li:not(:last-child) {
-  margin-bottom: 1%;
-}
-
-.list li button {
-  padding: 1%;
-  width: 90%;
-  border: 1px solid black;
+.item > button {
+  width: 80%;
+  padding: 0.5em;
+  border: 1.5px solid makeDarkBule;
   border-radius: 50px;
+  font-size: 1em;
+  transition: transform 0.5ms ease-in-out;
+}
+
+.item > button:hover {
+  transform: scale(1.1);
+  font-weight: 700;
 }
