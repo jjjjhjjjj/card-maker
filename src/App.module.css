@@ -1,8 +1,14 @@
+@value makeDarkBule from './common/colors.css';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1;
+}
+
+ol,
+li {
+  list-style: none;
 }
 
 button {
@@ -16,16 +22,11 @@ img {
   display: block;
 }
 
-li,
-ol {
-  list-style: none;
-}
-
-.loginBox {
+.app {
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #9fa8da;
+  background-color: makeDarkBule;
 }
