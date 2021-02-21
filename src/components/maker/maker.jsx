@@ -8,8 +8,8 @@ import styles from "./maker.module.css";
 
 const Maker = ({ auth }) => {
   const history = useHistory();
-  const [cards, setCards] = useState([
-    {
+  const [cards, setCards] = useState({
+    1: {
       id: "1",
       name: "Ellie",
       company: "Samsung",
@@ -20,7 +20,7 @@ const Maker = ({ auth }) => {
       fileName: "ellie",
       fileURL: null,
     },
-    {
+    2: {
       id: "2",
       name: "Ellie2",
       company: "Samsung",
@@ -31,7 +31,7 @@ const Maker = ({ auth }) => {
       fileName: "ellie",
       fileURL: "ellie.png",
     },
-    {
+    3: {
       id: "3",
       name: "Ellie3",
       company: "Samsung",
@@ -42,7 +42,7 @@ const Maker = ({ auth }) => {
       fileName: "ellie",
       fileURL: null,
     },
-  ]);
+  });
 
   const onLogout = () => {
     auth //
@@ -58,15 +58,32 @@ const Maker = ({ auth }) => {
     });
   }, []);
 
-  const addCard = (card) => {
-    const updated = [...cards, card];
-    setCards(updated);
+  const deleteCard = (cardId) => {
+    setCards((cards) => {
+      const updated = { ...cards };
+      delete updated[cardId];
+      return updated;
+    });
   };
+
+  const createOrUpdateCard = (card) => {
+    setCards((cards) => {
+      const updated = { ...cards };
+      updated[card.id] = card;
+      return updated;
+    });
+  };
+
   return (
     <div className={styles.maker}>
       <Header onLogout={onLogout} />
       <section className={styles.makerMain}>
-        <Editor cards={cards} addCard={addCard} />
+        <Editor
+          cards={cards}
+          addCard={createOrUpdateCard}
+          deleteCard={deleteCard}
+          updateCard={createOrUpdateCard}
+        />
         <Preview cards={cards} />
       </section>
       <Footer />
