@@ -1,20 +1,9 @@
 import React from "react";
 import styles from "./editor_input.module.css";
 import Button from "../button/button";
-import ImageFileInput from "../image_file_input/image_file_input";
 
-const EditorInput = ({ card, deleteCard, updateCard }) => {
-  const {
-    id,
-    name,
-    company,
-    title,
-    email,
-    message,
-    theme,
-    fileName,
-    fileURL,
-  } = card;
+const EditorInput = ({ FileInput, card, deleteCard, updateCard }) => {
+  const { id, name, company, title, email, message, theme, fileName } = card;
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +16,14 @@ const EditorInput = ({ card, deleteCard, updateCard }) => {
     updateCard({
       ...card,
       [event.currentTarget.name]: event.currentTarget.value,
+    });
+  };
+
+  const onChangeFile = (file) => {
+    updateCard({
+      ...card,
+      fileName: file.name,
+      fileURL: file.url,
     });
   };
 
@@ -77,7 +74,7 @@ const EditorInput = ({ card, deleteCard, updateCard }) => {
         onChange={onChange}
       />
       <div className={styles.fileInput}>
-        <ImageFileInput />
+        <FileInput name={fileName} onChangeFile={onChangeFile} />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>

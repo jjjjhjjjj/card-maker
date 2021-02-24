@@ -3,13 +3,13 @@ import styles from "./App.module.css";
 import Login from "./components/login/login";
 import Maker from "./components/maker/maker";
 
-function App({ auth }) {
+function App({ FileInput, auth }) {
   return (
     <div className={styles.app}>
       <Router>
         <Switch>
           <Route path="/maker">
-            <Maker auth={auth} />
+            <Maker FileInput={FileInput} auth={auth} />
           </Route>
           <Route path="/">
             <Login auth={auth} />

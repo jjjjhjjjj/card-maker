@@ -6,7 +6,7 @@ import Preview from "../preview/preview";
 import Footer from "../footer/footer";
 import styles from "./maker.module.css";
 
-const Maker = ({ auth }) => {
+const Maker = ({ FileInput, auth }) => {
   const history = useHistory();
   const [cards, setCards] = useState({
     1: {
@@ -17,8 +17,8 @@ const Maker = ({ auth }) => {
       title: "Software Engineer",
       email: "ellie@gmail.com",
       message: "go for it",
-      fileName: "ellie",
-      fileURL: null,
+      fileName: "",
+      fileURL: "",
     },
     2: {
       id: "2",
@@ -28,8 +28,8 @@ const Maker = ({ auth }) => {
       title: "Software Engineer",
       email: "ellie@gmail.com",
       message: "go for it",
-      fileName: "ellie",
-      fileURL: "ellie.png",
+      fileName: "",
+      fileURL: "",
     },
     3: {
       id: "3",
@@ -39,8 +39,8 @@ const Maker = ({ auth }) => {
       title: "Software Engineer",
       email: "ellie@gmail.com",
       message: "go for it",
-      fileName: "ellie",
-      fileURL: null,
+      fileName: "",
+      fileURL: "",
     },
   });
 
@@ -79,6 +79,7 @@ const Maker = ({ auth }) => {
       <Header onLogout={onLogout} />
       <section className={styles.makerMain}>
         <Editor
+          FileInput={FileInput}
           cards={cards}
           addCard={createOrUpdateCard}
           deleteCard={deleteCard}
