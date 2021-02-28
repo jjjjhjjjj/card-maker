@@ -7,7 +7,7 @@ const EditorInput = ({ FileInput, card, deleteCard, updateCard }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    deleteCard(id);
+    deleteCard(card);
   };
 
   const onChange = (event) => {
