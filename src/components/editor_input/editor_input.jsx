@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./editor_input.module.css";
 import Button from "../button/button";
 
-const EditorInput = ({ FileInput, card, deleteCard, updateCard }) => {
-  const { id, name, company, title, email, message, theme, fileName } = card;
+const EditorInput = memo(({ FileInput, card, deleteCard, updateCard }) => {
+  const { name, company, title, email, message, theme, fileName } = card;
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -79,6 +79,6 @@ const EditorInput = ({ FileInput, card, deleteCard, updateCard }) => {
       <Button name="Delete" onClick={onSubmit} />
     </form>
   );
-};
+});
 
 export default EditorInput;

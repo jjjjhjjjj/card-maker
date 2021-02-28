@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, memo } from "react";
 import styles from "./image_file_input.module.css";
 
-const ImageFileInput = ({ fileUploader, onChangeFile, name }) => {
+const ImageFileInput = memo(({ fileUploader, onChangeFile, name }) => {
   const [loading, setLoading] = useState(false);
   const fileInput = useRef();
   const onButtonClick = (e) => {
@@ -41,6 +41,6 @@ const ImageFileInput = ({ fileUploader, onChangeFile, name }) => {
       {loading && <div className={styles.spinner}></div>}
     </div>
   );
-};
+});
 
 export default ImageFileInput;

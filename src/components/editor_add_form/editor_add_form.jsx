@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import styles from "./editor_add_form.module.css";
 import Button from "../button/button";
 
-const EditorAddForm = ({ FileInput, onAdd }) => {
+const EditorAddForm = memo(({ FileInput, onAdd }) => {
   const [file, setFile] = useState({
     name: "",
     url: "",
@@ -94,6 +94,6 @@ const EditorAddForm = ({ FileInput, onAdd }) => {
       <Button name="Add" onClick={onSubmit} />
     </form>
   );
-};
+});
 
 export default EditorAddForm;

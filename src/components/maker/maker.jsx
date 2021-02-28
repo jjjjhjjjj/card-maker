@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import Header from "../header/header";
 import Editor from "../editor/editor";
@@ -12,13 +12,13 @@ const Maker = ({ FileInput, auth, database }) => {
   const [cards, setCards] = useState();
   const [userId, setUserId] = useState(historyState && historyState.id);
 
-  const onLogout = () => {
+  const onLogout = useCallback(() => {
     auth //
       .logout()
       .then(() => {
         history.push("/");
       });
-  };
+  }, [auth]);
 
   useEffect(() => {
     auth.onAuthState((user) => {
