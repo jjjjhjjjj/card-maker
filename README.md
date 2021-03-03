@@ -11,11 +11,11 @@
 
 ## 프로젝트 화면 및 소개
 
-- 메인 화면
+- 메인 화면  
 ![메인](https://user-images.githubusercontent.com/64426431/109818383-45904500-7c76-11eb-99fa-2a1f978584db.png)
     - firebase로 로그인 기능 구현
 
-- 카드 만들기 화면
+- 카드 만들기 화면  
 ![카드만들기](https://user-images.githubusercontent.com/64426431/109818625-86885980-7c76-11eb-9b0c-6045e662b40a.png)
     - 비로그인 시, 메인 화면으로 이동
     - firebase로 Database 구현
