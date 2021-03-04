@@ -7,7 +7,7 @@
 
 - ![React Badge](https://img.shields.io/badge/REACT-61DAFB?style=flat-square&logo=react&logoColor=white) ![JavaScript Badge](https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) ![PostCSS Badge](https://img.shields.io/badge/PostCSS-DD3A0A?style=flat-square&logo=postcss&logoColor=white)
 - ![React Router Badge](https://img.shields.io/badge/REACT_ROUTER-CA4245?style=flat-square&logo=react-router&logoColor=white)
-- ![React Router Badge](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=white) ![Cloudinary Badge](https://img.shields.io/badge/Cloudinary-003E54?style=flat-square)
+- ![React Router Badge](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=white) ![Cloudinary Badge](https://img.shields.io/badge/Cloudinary-003E54?style=flat-square)  
 
 ## 프로젝트 화면 및 소개
 
