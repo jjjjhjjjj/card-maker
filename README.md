@@ -9,7 +9,7 @@
 - ![React Router Badge](https://img.shields.io/badge/REACT_ROUTER-CA4245?style=flat-square&logo=react-router&logoColor=white)
 - ![React Router Badge](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=white) ![Cloudinary Badge](https://img.shields.io/badge/Cloudinary-003E54?style=flat-square)  
 
-## 프로젝트 화면 및 소개
+## 프로젝트 화면 및 소개  
 
 - 메인 화면  
 ![메인](https://user-images.githubusercontent.com/64426431/109818383-45904500-7c76-11eb-99fa-2a1f978584db.png)
